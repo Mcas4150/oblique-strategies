@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 import Menu from "../menu/index";
-import Card from "../card/index";
+import Main from "../main/index";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Menu/>
-        <Card/>
+        <Main/>
       </div>
     );
   }
