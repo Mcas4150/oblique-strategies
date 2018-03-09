@@ -85,3 +85,10 @@ const CardsAPI = {
     { advice: "Look closely at the most embarrassing details and amplify them"},
     { advice: "Define an area as 'safe' and use it as an anchor"},
   ],
+    rand: function() {
+        let card = this.cards[Math.floor(Math.random() * this.cards.length)];
+        return card;
+    }
+}
+
+  export default CardsAPI
