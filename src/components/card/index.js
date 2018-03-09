@@ -6,16 +6,6 @@ import './card.css';
 
 
 
-  const cards = [
-      "Remove specifics and convert to ambiguities",
-      "Think of the radio",
-      "Don't be frightened of clichés",
-      "Allow an easement (an easement is the abandonment of a stricture",
-      "What is the reality of the situation",
-      "Simple subtraction"
-    ];
-
-
 
 class Card extends Component {
 
@@ -31,7 +21,7 @@ class Card extends Component {
 
 
    handleClick() {
-      var randomCard = cards[Math.floor(Math.random() * cards.length)];
+      var randomCard = CardsAPI[Math.floor(Math.random() * CardsAPI.length)];
       this.setState({ random: randomCard });
   }
 
@@ -40,13 +30,8 @@ class Card extends Component {
   render() {
     return (
       <div className="Card">
-        <button onClick={this.handleClick.bind(this)}>Get Quote</button>
         <div>{this.state.random}</div>
-
-
-       {/* {CardsAPI.cards.map(p => (
-          <div className="advice">{p.advice}</div>
-          ))}*/}
+        <button onClick={this.handleClick.bind(this)}>Get Quote</button>
       </div>
     );
   }
