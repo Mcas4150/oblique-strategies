@@ -4,7 +4,9 @@
   "private": true,
   "dependencies": {
     "animate.css": "^3.6.1",
+    "radium": "^0.22.1",
     "react": "^16.2.0",
+    "react-animations": "^1.0.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1"
   },
