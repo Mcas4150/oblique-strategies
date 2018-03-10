@@ -134,15 +134,7 @@ import Radium, {StyleRoot} from 'radium';
 
 
 let randomCard = CardsAPI[Math.floor(Math.random() * CardsAPI.length)];
-
-
-// const styles = {
-//     fadeInUp: {
-//           animation: 'x 2s',
-//           animationName: Radium.keyframes(fadeInUp, 'fadeInUp')
-//         }
-// }
-   let randAnimate= Animations[Math.floor(Math.random() * Animations.length)];
+let randAnimate= Animations[Math.floor(Math.random() * Animations.length)];
 
 class Card extends Component {
     constructor(props) {
@@ -161,18 +153,11 @@ class Card extends Component {
 
 
    handleClick() {
-      let rgb = []
-      for (var i = 0; i < 3; i++) {
-        let r = Math.floor(Math.random() * 256)
-        rgb.push(r)
-      }
-
     // let randAnimate= Animations[Math.floor(Math.random() * Animations.length)];
     //  this.setState({ animationName: Radium.keyframes(animateNo, '${animateNo}')})
     let animatethis = [zoomInUp, zoomOut, zoomOutDown, zoomOutLeft, zoomOutRight, zoomOutUp];
     let pleasework = animatethis[Math.floor(Math.random() * animatethis.length)]
     this.setState({ animationName: Radium.keyframes(pleasework)})
-     this.setState({ backgroundColor: `rgb(${rgb})`})
       let randomCard = CardsAPI[Math.floor(Math.random() * CardsAPI.length)];
       this.setState({ random: randomCard });
       //  let randomFont = Fonts[Math.floor(Math.random() * Fonts.length)];
@@ -183,9 +168,7 @@ class Card extends Component {
   render() {
     return (
       <StyleRoot>
-        <div className="Card animated bounce" onClick={this.handleClick.bind(this)} style={ this.state}>
           <div id="advice" style={this.state.animation, this.state.animationName, this.state.color}>{this.state.random}</div>
-        </div>
       </StyleRoot>
     );
   }
