@@ -12,7 +12,6 @@ class Main extends Component {
     constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
-
     this.state = {
       random: randomCard,
       backgroundColor : "lightgrey",

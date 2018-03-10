@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import CardsAPI from './cardAPI';
-import Fonts from './fonts';
 import Animations from './animate';
 import './card.css';
 import {bouceOut, bounce, bounceIn, bounceInDown, bounceInLeft, bounceInRight, bounceInUp,
